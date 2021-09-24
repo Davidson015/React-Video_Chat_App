@@ -1,0 +1,16 @@
+body {
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.3)
+  ),
+  url(https://media.istockphoto.com/photos/blue-brush-strokes-in-horizontal-background-picture-id471620647?b=1&k=20&m=471620647&s=170667a&w=0&h=6r36Xmec_igdAVtL6l41D-miBTkdA2S_ZttFMVMk0Fk=);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
