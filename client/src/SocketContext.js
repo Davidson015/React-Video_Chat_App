@@ -4,8 +4,8 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-const socket = io('http://localhost:5000');
-// const socket = io('https://divad-video-chat-app.herokuapp.com');
+// const socket = io('http://localhost:5000');
+const socket = io('https://divad-video-chat-app.herokuapp.com');
 
 const ContextProvider = ( { children } ) => {
   const [me, setMe] = useState('');
@@ -57,10 +57,6 @@ const ContextProvider = ( { children } ) => {
     socket.emit('declineCall', { to: call.from });
     setCallEnded(true);
     setCall({})
-
-    // peer.on('stream', (currentStream) => {
-    //   userVideo.current.srcObject = currentStream;
-    // });
   }
 
   const callUser = (id) => {
@@ -76,7 +72,6 @@ const ContextProvider = ( { children } ) => {
 
     socket.on( 'callAccepted', (signal) => {
       setCallAccepted(true);
-      setCallEnded(true)
       
       peer.signal(signal);
 
